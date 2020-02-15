@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>FaceDetector Example 1</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <div>
+    <p>Step1: Load your image or use this dummy image</p>
+    <img data-js-image crossorigin="anonymous" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Google_team_group_photo_with_Vanhanen.jpg/640px-Google_team_group_photo_with_Vanhanen.jpg">
+    <input data-js-file accept="image/*" type="file">
+  </div>
+
+  <hr>
+
+  <div>
+    <p>Step2: Set `FaceDetectorOptions`</p>
+    <div>
+      fastMode
+      <label>
+        <input data-js-radio type="radio" name="fastMode" value="true" checked> true
+      </label>
+      <label>
+        <input data-js-radio type="radio" name="fastMode" value="false"> false
+      </label>
+    </div>
+      maxDetectedFaces
+      <input data-js-number type="number" min="1" value="1">
+  </div>
+
+  <hr>
+
+  <div>
+    <p>Step3: Detect faces</p>
+    <button data-js-button>Detect!</button>
+    <div>
+      <canvas data-js-canvas></canvas>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
+
